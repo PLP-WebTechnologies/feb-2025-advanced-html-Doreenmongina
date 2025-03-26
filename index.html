@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced HTML assignment</title>
+
+<style>
+    table, th, td {
+        border:10px;    
+    }
+    body{
+  background-image: url('background photo.jpg');
+}
+</style>
+
+</head>
+<body>
+    
+    <h1>TABLE WITH CONTACT</h1>
+    <table style="border: 2px solid">
+        <tr>
+            <th style="width: 200px;">Name</th>
+            <th>Phone No.</th>
+            <th>Email</th>
+            <th>Address</th>
+        </tr>
+        <tr>
+            <td><input type="text" name="name" placeholder="Enter your name" required></td>
+            <td><input type="text" name="address" placeholder="Enter your address" required></td>
+            <td><input type="email" name="email" placeholder="Enter your email" required></td>
+            <td><input type="tel" name="phone" placeholder="Enter your phone number" required pattern="^[0-9]{10}$" title="Phone number must be 10 digits."></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="name"  required></td>
+            <td><input type="text" name="address"  required></td>
+            <td><input type="email" name="email"  required></td>
+            <td><input type="tel" name="phone"  required pattern="^[0-9]{10}$" title="Phone number must be 10 digits."></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="name"  required></td>
+            <td><input type="text" name="address"  required></td>
+            <td><input type="email" name="email"  required></td>
+            <td><input type="tel" name="phone"  required pattern="^[0-9]{10}$" title="Phone number must be 10 digits."></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="name"  required></td>
+            <td><input type="text" name="address"  required></td>
+            <td><input type="email" name="email" required></td>
+            <td><input type="tel" name="phone" required pattern="^[0-9]{10}$" title="Phone number must be 10 digits."></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="name"  required></td>
+            <td><input type="text" name="address"  required></td>
+            <td><input type="email" name="email" required></td>
+            <td><input type="tel" name="phone"  required pattern="^[0-9]{10}$" title="Phone number must be 10 digits."></td>
+        </tr>
+    </table><br><br><br>
+<form style="border:1px solid; width: 1500px;"> 
+    <h1 style="text-align: center;">EMPLOYMENT APPLICATION FORM</h1><br><br>
+    <p>The ministry of Education and other stakeholder is conducting an enumeration exercise in
+         various counties that have been select. The aim is to take number of student who did 
+         their KCSE for the past two years and are yet to join colleges/universities due 
+         finacial issues. In partnership with the Equity Bank's Wing's to Fly program, there is 
+         a plan to enrol the need students to various technical institutions for them to acquire
+          technical skills that will reduce unemployment level through self employment and job 
+          creation in various sectors. We a looking to hire forty enumerators who will conduct 
+          house to house interviews targeting the started population. the first rollout exercise
+           will be conducted in three counties:</p>
+        <ol type="a">
+            <li>Machakos county</li> 
+            <li>Nairobi county</li>
+            <li>Kiambu county</li>
+            <li>Nakuru county</li>
+        </ol>
+<h2>Registration</h2>
+    <p>Please enter your email and password to Register for self</p>
+        <label>Create Account</label><br>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required><br><br><br>
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" id="psw"placeholder="Enter Password" name="psw" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{12,}$" 
+            title="Password must have at least one lowercase letter, one uppercase letter, one special character, and be at least 12 characters long."
+            attern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{12,}$" 
+            title="Password must have at least one lowercase letter, one uppercase letter, one special character, and be at least 12 characters long."
+            required><br><br><br>
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" id="psw-repeat" placeholder="Repeat Password" name="psw-repeat" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{12,}$" 
+        title="Password must have at least one lowercase letter, one uppercase letter, one special character, and be at least 12 characters long."
+        required><br><br><br>
+        <label>
+          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+        </label>
+        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>    
+        <button type="button">Cancel</button>
+        <button type="submit">SignUp</button>
+
+    <h2>Personal Information</h2>
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" placeholder="Doreen" required style="height: 30px;">  
+        <label for="mname">Middle Name</label> 
+        <input type="text" id="mname" name="mname" placeholder="Mong'ina" required style="height: 30px;">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" placeholder="Mauti" required style="height: 30px;"><br><br><br>
+        <label for="dbirth">Date of Birth</label>
+        <input type="date" id="dbirth" name="dbirth" style="height: 30px;">
+
+    <h2>Address</h2>
+    <label for="poBox"></label>
+    <input type="text" id="poBox" name="poBox" placeholder="P.O. Box 1213" required style="height: 30px;">
+
+    <label for="postalCode">Postal/Zip Code:</label>
+    <input type="text" id="postalCode" name="postalCode" placeholder="00618" required style="height: 30px;">
+        <br><br><br>
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" placeholder="Nairobi" required style="height: 30px">
+
+    <label for="country">Country:</label>
+    <input type="text" id="country" name="country" placeholder="Kenya" required style="height: 30px;">
+    <label for="county">County of Residence</label>
+    
+    <select name="County" id="County" style="height: 30px;">
+        <option value="Nairobi">Nairobi</option>
+        <option value="Machakos">Machakos</option>
+        <option value="Kiambu">Kiambu</option>
+        <option value="Nakuru">Nakuru</option>
+    </select>
+    <h2>Contact Information</h2>
+    <p>Please insert the relevant contact Informationas requested. This will enables us reach out to you whenever any issue arises in regards to the job applied. please provide the most used contact Informations</p>
+    <label for="tel">Telephone No:</label>
+    <input type="number" id="tel" name="tel" maxlength="10" style="height: 30px;"><br><br><br>
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email"  placeholder="example@gmail.com"required style="width: 1000px; height: 30px;">   
+<br><br><br>
+    <label for="github">GitHug Account:</label>
+    <input type="url" id="github" name="github" style="width: 1000px; height: 30px;">
+<br><br><br>
+    <label for="linkedIn">LinkedIn:</label>
+    <input type="url" id="linkedIn" name="linkedIn" style="width: 1000px; height: 30px;">
+
+<h2>Job requirements</h2>
+<p>For one to quallify for the above position, on must have the following requirements failure to which, there is an automatic disqualification.</p>
+<ul>
+    <li>High School Diploma or Equivalent: A high school diploma or equivalent is often the minimum requirement. </li>
+    <li>Strong Communication Skills: You'll need excellent oral and written communication skills to interact with residents and accurately record information. </li>
+    <li>Interpersonal Skills: Be able to build rapport and effectively interact with people from diverse backgrounds. </li>
+    <li>Data Collection Experience: Prior experience in data collection or survey work is often preferred. </li>
+    <li>Attention to Detail: Accuracy in data collection and recording is crucial. </li>
+    <li>Basic Computer Skills: Familiarity with electronic data collection tools and basic computer skills is often required. </li>
+    <li>Ability to Work Independently: You'll need to be able to work independently and follow procedures.</li>
+</ul>
+<p>In addition to the above requirements, we will be using some of data collectiontools to help us collect accurate data. some of the tools we need the enumerator to get Familiarized with are; <strong>Fulcrum,FastField,Jotform,KoboToolbox and Fluix.</strong>
+</strong><br><br>
+Please select the Data collection tools you have used before or familiar with;   <br> <br>   
+    <input type="checkbox" id="Fulcrum" name="Fulcrum" value="Fulcrum">
+    <label for="Fulcrum">Fulcrum</label><br>   
+    <input type="checkbox" id="FastField" name="FastField" value="FastField">
+    <label for="FastField">FastField</label><br>
+    <input type="checkbox" id="Jotform" name="Jotform" value="Jotform">
+    <label for="Jotform">Jotform</label><br>
+    <input type="checkbox" id="KoboToolbox" name="KoboToolbox" value="KoboToolbox">
+    <label for="KoboToolbox">KoboToolbox</label><br>
+    <input type="checkbox" id="Fluix" name="Fluix" value="Fluix">
+    <label for="Fluix">Fluix</label><br>
+    
+<h3>Are you a resident of the mentioned counties?</h3>
+<input type="radio" id="yes" name="yes" value="yes">
+<label for="yes">yes</label>
+<input type="radio" id="no" name="no" value="no">
+<label for="no">No</label><br>
+
+<h2>Employment Desired:</h2>
+<label for="positionapplied">Position Applying For</label>
+<input type="text" id="positionapplied" name="positionapplied" required style="height: 30px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<label for="availability">Date You Can Start</label>
+<input type="date" id="availability" name="availability" style="height: 30px;">
+
+<br><br>
+<h2>Skills/Qualifications:</h2>
+<label for="skills">Skills</label>
+<input type="text" id="skills" name="skills" style="height: 80px; width: 500px;">
+<h2>Qualifications</h2>
+
+<input type="text" id="qualifications" name="qualifications" style="height: 80px; width: 500px;"><br>
+<small>List any relevant certification or qualifications:</small> 
+
+<h2>Cover Letter & Resume</h2>
+<label for="cletter">Cover Letter</label>
+<input type="file" id="resume" name="resume" accept=".pdf" required>
+<label for="cletter">Resume</label>
+<input type="file" id="resume" name="resume" accept=".pdf" required>
+
+<div style="margin-top: 20px;">
+    <input type="submit" value="Submit">
+</div>
+</form>
+</body>
+</html>

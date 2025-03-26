@@ -1,0 +1,118 @@
+
+<style>
+    small {
+        display: block;
+        margin-top: 5px;
+        font-size: 0.85em;
+        color: #666;
+    }
+</style>
+
+<form>
+    <label for="poBox">P.O. Box:</label>
+    <input type="text" id="poBox" name="poBox" placeholder="P.O. Box 1213" required>
+    <small>Enter your P.O. Box number (e.g., P.O. Box 1213).</small>
+
+    <label for="postalCode">Postal Code:</label>
+    <input type="text" id="postalCode" name="postalCode" placeholder="00618" required>
+    <small>Enter the postal code (e.g., 00618).</small>
+
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" placeholder="Nairobi" required>
+    <small>Enter your city (e.g., Nairobi).</small>
+
+    <label for="country">Country:</label>
+    <input type="text" id="country" name="country" placeholder="Kenya" required>
+    <small>Enter the country (e.g., Kenya).</small>
+    
+    <button type="submit">Submit</button>
+</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop File Upload</title>
+    <style>
+        #drag-area {
+            width: 300px;
+            height: 200px;
+            border: 2px dashed #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+        #drag-area.dragging {
+            border-color: #666;
+            color: #666;
+        }
+        #file-name {
+            margin-top: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<form id="upload-form">
+    <label for="pdfUpload">Attach a PDF document:</label>
+    <div id="drag-area">
+        <p>Drag & Drop your file here or click to select a file.</p>
+    </div>
+    <input type="file" id="pdfUpload" name="pdfUpload" accept=".pdf" style="display: none;" required>
+    <p id="file-name"></p>
+    
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    const dragArea = document.getElementById('drag-area');
+    const fileInput = document.getElementById('pdfUpload');
+    const fileNameDisplay = document.getElementById('file-name');
+
+    // Drag over event
+    dragArea.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dragArea.classList.add('dragging');
+    });
+
+    // Drag leave event
+    dragArea.addEventListener('dragleave', () => {
+        dragArea.classList.remove('dragging');
+    });
+
+    // Drop event
+    dragArea.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dragArea.classList.remove('dragging');
+        
+        const file = e.dataTransfer.files[0]; // Get the dropped file
+        if (file && file.type === 'application/pdf') {
+            fileInput.files = e.dataTransfer.files;  // Assign file to input field
+            fileNameDisplay.textContent = `File: ${file.name}`;
+        } else {
+            fileNameDisplay.textContent = "Please upload a valid PDF file.";
+        }
+    });
+
+    // Click event to open the file input
+    dragArea.addEventListener('click', () => {
+        fileInput.click();
+    });
+
+    // Change event to display the selected file name (for file input)
+    fileInput.addEventListener('change', () => {
+        const file = fileInput.files[0];
+        if (file && file.type === 'application/pdf') {
+            fileNameDisplay.textContent = `File: ${file.name}`;
+        } else {
+            fileNameDisplay.textContent = "Please upload a valid PDF file.";
+        }
+    });
+</script>
+
+</body>
+</html>
